@@ -3,9 +3,9 @@ import { NavBar } from "./NavBar";
 import { Carousel } from "./Carousel";
 
 const images = [
-  "/src/assets/images/IA slider 1.jpg",
-  "/src/assets/images/IA slider 2.jpg",
-  "/src/assets/images/IA slider 3.jpg",
+  "/src/assets/images/IAslider1.jpg",
+  "/src/assets/images/IAslider2.jpg",
+  "/src/assets/images/IAslider3.jpg",
 ];
 
 export const Header = () => {
