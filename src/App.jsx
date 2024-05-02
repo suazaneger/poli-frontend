@@ -4,10 +4,18 @@ import { Title } from "./components/main/Title";
 import { CardContainer } from "./components/main/CardContainer";
 import { OurTeam } from "./components/main/OurTeam";
 import { OurServices } from "./components/main/OurServices";
+import { OurClientes } from "./components/main/OurClientes";
+
 import csuaza from "./assets/images/csuaza.png";
+import drubio from "./assets/images/drubio.png";
 
 function App() {
   const teamMembers = [
+    {
+      photo: drubio,
+      name: "Daniela Rubio",
+      position: "Project Manager",
+    },
     {
       photo: csuaza,
       name: "Cesar  Suaza",
@@ -17,11 +25,6 @@ function App() {
       photo: csuaza,
       name: "Juan Diego",
       position: "Frondend Developer",
-    },
-    {
-      photo: csuaza,
-      name: "Daniela Rubio",
-      position: "Project Manager",
     },
     {
       photo: csuaza,
@@ -52,6 +55,7 @@ function App() {
         <OurServices />
         <Title part1="NUESTROS" part2="" part3="PROYECTOS" />
         <Title part1="NUESTROS" part2="" part3="CLIENTES" />
+        <OurClientes />
         <Title part1="COMENTARIOS" part2="Y" part3="OPINIONES" />
       </main>
     </>

@@ -1,7 +1,15 @@
+import React, { useState } from "react";
+
 import logo from "../../assets/images/logo.png";
 import burgerMenu from "../../assets/images/burger-menu.png";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+  const [showAuthentication, setShowAuthentication] = useState(false);
+
+  const handleLoginButtonClick = () => {
+    setShowAuthentication(true);
+  };
   return (
     <nav className="bg-white   flex justify-between  mx-auto max-w-7xl ">
       {/* Columna para el logo */}
@@ -61,10 +69,22 @@ export const NavBar = () => {
       </div>
 
       {/* Columna para los botones */}
-      <div className="bg-white flex  items-center justify-end mt-1">
-        <button className="btn-custom hover:bg-black">Contactanos</button>
-        <button className="btn-custom hover:bg-black ml-4">Ingresar</button>
+
+      <div className="bg-white flex items-center justify-end mt-1">
+        <button
+          className="btn-custom hover:bg-black"
+          onClick={handleLoginButtonClick}
+        >
+          Contactanos
+        </button>
+        <button
+          className="btn-custom hover:bg-black ml-4"
+          onClick={handleLoginButtonClick}
+        >
+          Ingresar
+        </button>
       </div>
+      {showAuthentication && <Authentication />}
     </nav>
   );
 };
